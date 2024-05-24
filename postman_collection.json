@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "97c4b25c-8b7f-4a28-94d9-42fc5aa66234",
+		"name": "hanami",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24671261"
+	},
+	"item": [
+		{
+			"name": "books index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2300/home/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2300",
+					"path": [
+						"home",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "books show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2300/home/books/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2300",
+					"path": [
+						"home",
+						"books",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authors index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2300/home/authors?page=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2300",
+					"path": [
+						"home",
+						"authors"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authors show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2300/home/authors/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2300",
+					"path": [
+						"home",
+						"authors",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book\": {\n        \"title\": \"Thinking Fast Thinking Slow\",\n        \"author_id\": 7,\n        \"images\": [\"https://m.media-amazon.com/images/I/71f6DceqZAL._SY466_.jpg\"]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2300/admin/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2300",
+					"path": [
+						"admin",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "author create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\": {\n        \"name\": \"Daniel Kahneman\",\n        \"email\": \"dk@fast.com\",\n        \"contact_no\": 2313423541\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2300/home/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2300",
+					"path": [
+						"home",
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2300/admin/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2300",
+					"path": [
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2300/admin/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2300",
+					"path": [
+						"admin",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"name\": \"AB de Villers\",\n        \"email\": \"abd360@rcb.com\",\n        \"type\": \"consumer\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2300/admin/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2300",
+					"path": [
+						"admin",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "book update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book\": {\n        \"title\": \"The Monk Who Sold His Ferrari updated\",\n        \"author_id\": 2\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2300/admin/books/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2300",
+					"path": [
+						"admin",
+						"books",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
